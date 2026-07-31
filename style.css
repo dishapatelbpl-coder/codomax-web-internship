@@ -1,0 +1,297 @@
+/* =========================
+   BASIC RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f7fb;
+    color: #1f2937;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+header {
+    background-color: #0f172a;
+    padding: 20px 8%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h2 {
+    color: white;
+    font-size: 24px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+
+/* =========================
+   HERO / HOME SECTION
+========================= */
+
+#home {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #0f172a, #1e3a8a);
+    color: white;
+}
+
+#home h1 {
+    font-size: 52px;
+    margin-bottom: 10px;
+}
+
+#home h2 {
+    font-size: 26px;
+    color: #38bdf8;
+    margin-bottom: 20px;
+}
+
+#home p {
+    max-width: 650px;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+#home a {
+    display: inline-block;
+    background-color: #38bdf8;
+    color: #0f172a;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#home a:hover {
+    background-color: white;
+}
+
+
+/* =========================
+   ALL SECTIONS
+========================= */
+
+section {
+    padding: 80px 8%;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 32px;
+    color: #0f172a;
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   ABOUT SECTION
+========================= */
+
+#about {
+    background-color: white;
+    text-align: center;
+}
+
+#about p {
+    max-width: 750px;
+    margin: 15px auto;
+    font-size: 17px;
+}
+
+
+/* =========================
+   SKILLS SECTION
+========================= */
+
+#skills {
+    background-color: #eef6ff;
+    text-align: center;
+}
+
+#skills ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+#skills li {
+    background-color: white;
+    padding: 15px 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#skills li:hover {
+    transform: translateY(-5px);
+}
+
+
+/* =========================
+   EDUCATION SECTION
+========================= */
+
+#education {
+    background-color: white;
+    text-align: center;
+}
+
+#education article {
+    max-width: 650px;
+    margin: auto;
+    padding: 30px;
+    background-color: #f5f7fb;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+#education h3 {
+    color: #1e3a8a;
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   CONTACT SECTION
+========================= */
+
+#contact {
+    background-color: #eef6ff;
+}
+
+form {
+    max-width: 600px;
+    margin: auto;
+    background-color: white;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: none;
+    border-color: #38bdf8;
+}
+
+form button {
+    background-color: #1e3a8a;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0f172a;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background-color: #0f172a;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+footer p {
+    margin: 5px;
+}
+
+
+/* =========================
+   MOBILE RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    nav h2 {
+        font-size: 20px;
+    }
+
+    nav a {
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+
+    #home h1 {
+        font-size: 38px;
+    }
+
+    #home h2 {
+        font-size: 22px;
+    }
+
+    section {
+        padding: 60px 5%;
+    }
+
+}
