@@ -17,6 +17,7 @@ body {
     background-color: #f5f7fb;
     color: #1f2937;
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 
@@ -43,10 +44,15 @@ nav h2 {
     font-size: 24px;
 }
 
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
 nav a {
     color: white;
     text-decoration: none;
-    margin-left: 25px;
     font-weight: bold;
 }
 
@@ -146,10 +152,11 @@ section h2 {
 
 #skills ul {
     list-style: none;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 15px;
+    max-width: 900px;
+    margin: auto;
 }
 
 #skills li {
@@ -223,6 +230,10 @@ form textarea {
     font-size: 16px;
 }
 
+form textarea {
+    resize: vertical;
+}
+
 form input:focus,
 form textarea:focus {
     outline: none;
@@ -262,36 +273,107 @@ footer p {
 
 
 /* =========================
-   MOBILE RESPONSIVE DESIGN
+   MOBILE DEVICES
+   768px and below
 ========================= */
 
 @media (max-width: 768px) {
 
+    header {
+        padding: 15px 20px;
+    }
+
     nav {
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 10px;
+        flex-direction: column;
+        align-items: center;
     }
 
     nav h2 {
-        font-size: 20px;
-    }
-
-    nav a {
-        margin-left: 8px;
-        margin-right: 8px;
-    }
-
-    #home h1 {
-        font-size: 38px;
-    }
-
-    #home h2 {
         font-size: 22px;
     }
 
-    section {
-        padding: 60px 5%;
+    .nav-links {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 15px;
+        width: 100%;
+        text-align: center;
     }
 
+    #home {
+        min-height: auto;
+        padding: 80px 20px;
+    }
+
+    #home h1 {
+        font-size: 40px;
+    }
+
+    #home h2 {
+        font-size: 26px;
+    }
+
+    #home p {
+        font-size: 18px;
+    }
+
+    section {
+        padding: 60px 20px;
+    }
+
+    section h2 {
+        font-size: 28px;
+    }
+
+    #skills ul {
+        grid-template-columns: 1fr;
+    }
+
+    #education article {
+        padding: 20px;
+    }
+
+    form {
+        width: 100%;
+        padding: 20px;
+    }
+
+    input,
+    textarea,
+    button {
+        width: 100%;
+    }
+}
+
+
+/* =========================
+   TABLET DEVICES
+   769px - 1024px
+========================= */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    header {
+        padding: 20px 40px;
+    }
+
+    nav {
+        gap: 20px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    #skills ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #home h1 {
+        font-size: 55px;
+    }
+
+    section {
+        padding: 80px 40px;
+    }
 }
