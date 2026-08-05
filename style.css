@@ -141,6 +141,37 @@ section h2 {
 }
 
 
+/* Show More Button */
+
+#moreBtn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: #1e3a8a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#moreBtn:hover {
+    background-color: #0f172a;
+}
+
+
+/* Hidden About Information */
+
+#moreInfo {
+    display: none;
+    max-width: 750px;
+    margin: 20px auto 0;
+    padding: 20px;
+    background-color: #eef6ff;
+    border-radius: 10px;
+}
+
+
 /* =========================
    SKILLS SECTION
 ========================= */
@@ -256,6 +287,52 @@ form button:hover {
 }
 
 
+/* Form Success Message */
+
+#formMessage {
+    margin-top: 15px;
+    color: #15803d;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+/* =========================
+   SCROLL TO TOP BUTTON
+========================= */
+
+#topBtn {
+    display: none;
+    position: fixed;
+
+    right: 25px;
+    bottom: 25px;
+
+    width: 50px;
+    height: 50px;
+
+    border: none;
+    border-radius: 50%;
+
+    background-color: #1e3a8a;
+    color: white;
+
+    font-size: 24px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+
+    z-index: 999;
+}
+
+#topBtn:hover {
+    background-color: #38bdf8;
+    color: #0f172a;
+}
+
+
 /* =========================
    FOOTER
 ========================= */
@@ -342,6 +419,15 @@ footer p {
     textarea,
     button {
         width: 100%;
+    }
+
+    /* Keep scroll button small on mobile */
+
+    #topBtn {
+        width: 45px;
+        height: 45px;
+        right: 15px;
+        bottom: 15px;
     }
 }
 

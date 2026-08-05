@@ -1,19 +1,23 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Disha Patel - Web Developer</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Header / Navigation -->
+    <!-- =========================
+         HEADER / NAVIGATION
+    ========================== -->
     <header>
         <nav>
+
             <h2>Disha Patel</h2>
 
             <div class="nav-links">
@@ -23,14 +27,20 @@
                 <a href="#education">Education</a>
                 <a href="#contact">Contact</a>
             </div>
+
         </nav>
     </header>
 
+
     <main>
 
-        <!-- Hero Section -->
+        <!-- =========================
+             HERO / HOME SECTION
+        ========================== -->
         <section id="home">
+
             <h1>Hi, I'm Disha Patel</h1>
+
             <h2>Web Development Intern</h2>
 
             <p>
@@ -39,10 +49,15 @@
             </p>
 
             <a href="#about">Learn More</a>
+
         </section>
 
-        <!-- About Section -->
+
+        <!-- =========================
+             ABOUT SECTION
+        ========================== -->
         <section id="about">
+
             <h2>About Me</h2>
 
             <p>
@@ -55,10 +70,29 @@
                 Through this internship, I am gaining practical experience
                 in creating modern websites and improving my problem-solving skills.
             </p>
+
+            <!-- JavaScript Button Event -->
+            <button id="moreBtn">Show More About Me</button>
+
+            <!-- Hidden content that JavaScript will show/hide -->
+            <div id="moreInfo">
+
+                <p>
+                    I enjoy learning new technologies and creating responsive
+                    websites. My goal is to improve my frontend development
+                    skills and become a professional web developer.
+                </p>
+
+            </div>
+
         </section>
 
-        <!-- Skills Section -->
+
+        <!-- =========================
+             SKILLS SECTION
+        ========================== -->
         <section id="skills">
+
             <h2>My Skills</h2>
 
             <ul>
@@ -69,57 +103,119 @@
                 <li>AI Basics</li>
                 <li>Java</li>
             </ul>
+
         </section>
 
-        <!-- Education Section -->
+
+        <!-- =========================
+             EDUCATION SECTION
+        ========================== -->
         <section id="education">
+
             <h2>Education</h2>
 
             <article>
+
                 <h3>Web Development Internship</h3>
 
-                <p><strong>Codomax Digital Solutions</strong></p>
+                <p>
+                    <strong>Codomax Digital Solutions</strong>
+                </p>
 
                 <p>
                     Learning practical web development skills including
                     HTML, CSS, JavaScript, responsive design,
                     Flexbox, CSS Grid, Git, and GitHub.
                 </p>
+
             </article>
+
         </section>
 
-        <!-- Contact Section -->
+
+        <!-- =========================
+             CONTACT SECTION
+        ========================== -->
         <section id="contact">
+
             <h2>Contact Me</h2>
 
-            <form>
+            <form id="contactForm">
+
                 <label for="name">Name</label>
-                <input type="text" id="name" name="name" required>
+
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                >
+
 
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                >
+
 
                 <label for="message">Message</label>
+
                 <textarea
                     id="message"
                     name="message"
                     rows="5"
                     cols="30"
-                    required></textarea>
+                    required>
+                </textarea>
 
-                <button type="submit">Send Message</button>
+
+                <button type="submit">
+                    Send Message
+                </button>
+
+                <!-- JavaScript will change this text -->
+                <p id="formMessage"></p>
+
             </form>
+
         </section>
 
     </main>
 
-    <!-- Footer -->
+
+    <!-- =========================
+         SCROLL TO TOP BUTTON
+    ========================== -->
+
+    <button id="topBtn" title="Go to top">
+        ↑
+    </button>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
     <footer>
-        <p>&copy; 2026 Disha Patel. All rights reserved.</p>
-        <p>Web Development Intern</p>
+
+        <p>
+            &copy; 2026 Disha Patel. All rights reserved.
+        </p>
+
+        <p>
+            Web Development Intern
+        </p>
+
     </footer>
+
+
+    <!-- JavaScript file -->
+    <script src="script.js"></script>
 
 </body>
 
 </html>
-```
