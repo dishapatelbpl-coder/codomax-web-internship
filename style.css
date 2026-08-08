@@ -27,6 +27,7 @@ body {
 }
 
 
+
 /* =========================
    NAVIGATION
 ========================= */
@@ -83,8 +84,9 @@ nav a:hover {
 }
 
 
+
 /* =========================
-   HERO / HOME SECTION
+   HOME SECTION
 ========================= */
 
 #home {
@@ -160,6 +162,7 @@ nav a:hover {
 }
 
 
+
 /* =========================
    ALL SECTIONS
 ========================= */
@@ -180,6 +183,7 @@ section h2 {
 }
 
 
+
 /* =========================
    ABOUT SECTION
 ========================= */
@@ -198,6 +202,7 @@ section h2 {
 
     font-size: 17px;
 }
+
 
 
 /* =========================
@@ -230,6 +235,7 @@ section h2 {
 }
 
 
+
 /* =========================
    HIDDEN ABOUT INFORMATION
 ========================= */
@@ -247,6 +253,7 @@ section h2 {
 
     border-radius: 10px;
 }
+
 
 
 /* =========================
@@ -297,9 +304,9 @@ section h2 {
 }
 
 
+
 /* =========================
    PROJECTS SECTION
-   DAY 8
 ========================= */
 
 #projects {
@@ -308,8 +315,6 @@ section h2 {
     text-align: center;
 }
 
-
-/* Intro text */
 
 .projects-intro {
     max-width: 700px;
@@ -320,8 +325,6 @@ section h2 {
 }
 
 
-/* Project Cards Container */
-
 .project-container {
     max-width: 1100px;
 
@@ -329,14 +332,11 @@ section h2 {
 
     display: grid;
 
-    grid-template-columns:
-        repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 
     gap: 25px;
 }
 
-
-/* Individual Project Card */
 
 .project-card {
     background-color: #f5f7fb;
@@ -359,8 +359,6 @@ section h2 {
 }
 
 
-/* Card hover effect */
-
 .project-card:hover {
     transform: translateY(-8px);
 
@@ -369,8 +367,6 @@ section h2 {
         rgba(0, 0, 0, 0.12);
 }
 
-
-/* Project Icon */
 
 .project-icon {
     width: 70px;
@@ -393,18 +389,14 @@ section h2 {
 }
 
 
-/* Project Title */
-
 .project-card h3 {
     color: #1e3a8a;
 
-    font-size: 22px;
+    font-size: 21px;
 
     margin-bottom: 15px;
 }
 
-
-/* Project Description */
 
 .project-card p {
     font-size: 16px;
@@ -412,8 +404,6 @@ section h2 {
     margin-bottom: 20px;
 }
 
-
-/* Technology Tags */
 
 .project-tech {
     display: flex;
@@ -443,8 +433,6 @@ section h2 {
 }
 
 
-/* View Project Button */
-
 .project-btn {
     display: inline-block;
 
@@ -471,39 +459,71 @@ section h2 {
 }
 
 
+
 /* =========================
    EDUCATION SECTION
 ========================= */
 
 #education {
-    background-color: white;
+    background-color: #eef6ff;
 
     text-align: center;
 }
 
 
-#education article {
-    max-width: 650px;
+.education-container {
+    max-width: 900px;
 
     margin: auto;
 
-    padding: 30px;
+    display: grid;
 
-    background-color: #f5f7fb;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+.education-card {
+    background-color: white;
+
+    padding: 25px;
 
     border-radius: 15px;
 
     box-shadow:
         0 5px 15px
         rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
 }
 
 
-#education h3 {
+.education-card:hover {
+    transform: translateY(-5px);
+}
+
+
+.education-card h3 {
     color: #1e3a8a;
 
-    margin-bottom: 10px;
+    font-size: 20px;
+
+    margin-bottom: 12px;
 }
+
+
+.education-card p {
+    margin: 8px 0;
+
+    font-size: 16px;
+}
+
+
+.education-card em {
+    color: #475569;
+}
+
 
 
 /* =========================
@@ -511,7 +531,7 @@ section h2 {
 ========================= */
 
 #contact {
-    background-color: #eef6ff;
+    background-color: white;
 }
 
 
@@ -520,7 +540,7 @@ form {
 
     margin: auto;
 
-    background-color: white;
+    background-color: #f5f7fb;
 
     padding: 35px;
 
@@ -594,6 +614,7 @@ form button:hover {
 }
 
 
+
 /* =========================
    FORM SUCCESS MESSAGE
 ========================= */
@@ -609,8 +630,9 @@ form button:hover {
 }
 
 
+
 /* =========================
-   SCROLL TO TOP BUTTON
+   SCROLL TO TOP
 ========================= */
 
 #topBtn {
@@ -655,6 +677,7 @@ form button:hover {
 }
 
 
+
 /* =========================
    FOOTER
 ========================= */
@@ -673,6 +696,7 @@ footer {
 footer p {
     margin: 5px;
 }
+
 
 
 /* =========================
@@ -749,7 +773,7 @@ footer p {
     }
 
 
-    /* Projects become one column */
+    /* Projects */
 
     .project-container {
         grid-template-columns: 1fr;
@@ -763,8 +787,17 @@ footer p {
     }
 
 
-    #education article {
-        padding: 20px;
+    /* Education */
+
+    .education-container {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+
+    .education-card {
+        padding: 25px 20px;
     }
 
 
@@ -795,6 +828,7 @@ footer p {
 }
 
 
+
 /* =========================
    TABLET DEVICES
    769px - 1024px
@@ -823,11 +857,17 @@ and (max-width: 1024px) {
     }
 
 
-    /* Projects become two columns */
+    /* Projects */
 
     .project-container {
-        grid-template-columns:
-            repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* Education */
+
+    .education-container {
+        grid-template-columns: repeat(2, 1fr);
     }
 
 

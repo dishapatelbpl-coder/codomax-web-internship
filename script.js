@@ -1,6 +1,5 @@
 // =====================================
-// DAY 7 + DAY 8
-// JAVASCRIPT
+// DAY 7 JAVASCRIPT
 // =====================================
 
 
@@ -8,28 +7,37 @@
 // 1. SHOW / HIDE ABOUT INFORMATION
 // -------------------------------------
 
-const moreBtn = document.getElementById("moreBtn");
+const moreBtn =
+    document.getElementById("moreBtn");
 
-const moreInfo = document.getElementById("moreInfo");
+
+const moreInfo =
+    document.getElementById("moreInfo");
 
 
-moreBtn.addEventListener("click", function () {
+moreBtn.addEventListener(
+    "click",
+    function () {
 
-    if (moreInfo.style.display === "block") {
+        if (moreInfo.style.display === "block") {
 
-        moreInfo.style.display = "none";
+            moreInfo.style.display = "none";
 
-        moreBtn.textContent = "Show More About Me";
+            moreBtn.textContent =
+                "Show More About Me";
 
-    } else {
+        } else {
 
-        moreInfo.style.display = "block";
+            moreInfo.style.display = "block";
 
-        moreBtn.textContent = "Show Less";
+            moreBtn.textContent =
+                "Show Less";
+
+        }
 
     }
+);
 
-});
 
 
 // -------------------------------------
@@ -53,13 +61,13 @@ contactForm.addEventListener(
         event.preventDefault();
 
 
-        // Get name
+        // Get user's name
 
         const name =
             document.getElementById("name").value;
 
 
-        // Show message
+        // Display success message
 
         formMessage.textContent =
             "Thank you, " +
@@ -73,6 +81,7 @@ contactForm.addEventListener(
 
     }
 );
+
 
 
 // -------------------------------------
@@ -99,6 +108,7 @@ window.addEventListener(
 
     }
 );
+
 
 
 // -------------------------------------
